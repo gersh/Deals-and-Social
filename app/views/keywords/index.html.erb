@@ -1,0 +1,8 @@
+<%= form_tag '/keywords/search' do |f| %>
+<%=label_tag :keyword,'Keyword' %> <%= text_field_tag :keyword %><br/>
+<%=label_tag :lat,'Latitude' %> <%= text_field_tag :lat %><br/>
+
+<%=label_tag :lon,'Longitude' %> <%= text_field_tag :lon %><br/>
+<%=label_tag :dist,'Distance' %> <%= text_field_tag :dist %><br/>
+<%=submit_tag %>
+<% end %>
