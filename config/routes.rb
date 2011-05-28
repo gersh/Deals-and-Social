@@ -25,9 +25,12 @@ Dealsandsocial::Application.routes.draw do
   #     end
   #   end
 
+  resource :posts
   get '/keywords' => 'keywords#index'
   get '/keywords/search' => 'keywords#search'
   post '/keywords/search' => 'keywords#search'
+  get '/theme/:id' => 'glue#show'
+
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

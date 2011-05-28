@@ -1,0 +1,49 @@
+
+<h1><%= @theme.theme %></h1>
+
+<table border="2">
+<tr>
+<td width="50%">
+<table border="1">
+  <% @theme.posts.each do |post| %>
+  <tr>
+    <td>
+      <%= post.twitter_user.twitter_user %>
+    </td>
+    <td>
+      <%= post.text %>
+    </td>
+  </tr>
+  <% end %>
+  <tr>
+  <td colspan="2">
+  <%= form_for(@current_post) do |rf| %>
+  <%= rf.text_field :text %>
+  <%= rf.hidden_field :theme_id, :value => @theme.id %>
+  <%= rf.hidden_field :twitter_user_id, :value => @twitter_user.object_id %>
+  <br/>
+  <%= rf.submit 'Save' %>
+  <br/>
+  <% end %>
+  </td>
+  </tr>
+</table>
+</td>
+
+<td>
+<table>
+<% @theme.tweets.each do |tw| %>
+  <tr>
+    <td>
+    <%= tw.twitter_user %>
+    </td>
+    <td>
+    <%= tw.tweet%>
+    </td>
+  </tr>
+<% end %>
+
+</table>
+</td>
+</tr>
+</table>
