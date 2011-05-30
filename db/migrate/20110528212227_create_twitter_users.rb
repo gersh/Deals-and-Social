@@ -2,7 +2,6 @@ class CreateTwitterUsers < ActiveRecord::Migration
   def self.up
     create_table :twitter_users do |t|
       t.string :twitter_user
-
       t.timestamps
     end
   end

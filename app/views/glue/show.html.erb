@@ -8,26 +8,28 @@
   <% @theme.posts.each do |post| %>
   <tr>
     <td>
-      <%= post.twitter_user.twitter_user %>
+      <%= post.twitter_user %>
     </td>
     <td>
       <%= post.text %>
     </td>
   </tr>
   <% end %>
-  <tr>
-  <td colspan="2">
-  <%= form_for(@current_post) do |rf| %>
+</table>
+<br/> <br/> <br/>
+<%= form_for(@current_post) do |rf| %>
+  <%= label_tag "Your comments" %>
+  <br/>
   <%= rf.text_field :text %>
   <%= rf.hidden_field :theme_id, :value => @theme.id %>
-  <%= rf.hidden_field :twitter_user_id, :value => @twitter_user.object_id %>
+  <br/> <br/>
+  <%= rf.label :twitter_user, "Your twitter username" %>
+  <br/>
+  <%= rf.text_field :twitter_user %>
   <br/>
   <%= rf.submit 'Save' %>
   <br/>
-  <% end %>
-  </td>
-  </tr>
-</table>
+<% end %>
 </td>
 
 <td>
@@ -40,6 +42,9 @@
     <td>
     <%= tw.tweet%>
     </td>
+    <td>
+      <%= central_time(tw.created_at) %>
+    </td>
   </tr>
 <% end %>
 
@@ -47,3 +52,4 @@
 </td>
 </tr>
 </table>
+

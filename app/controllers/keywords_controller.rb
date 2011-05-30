@@ -12,11 +12,8 @@ class KeywordsController < ApplicationController
 
     #@users=@s.fetch.map{|tw| tw.from_user}
     @s.fetch.each {|tw|
-      tweet = Tweet.new(:twitter_user=>tw.from_user,:tweet=>tw.text, :theme_id => th.id)
+      tweet = Tweet.new(:twitter_user=>tw.from_user,:tweet=>tw.text, :theme_id => th.id, :created_at => tw.created_at)
       tweet.save
-
-      user = TwitterUser.new(:twitter_user => tw.from_user)
-      user.save
     }
 
     redirect_to :controller => :glue, :action => :show, :id => th.id
