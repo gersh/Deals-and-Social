@@ -2,7 +2,7 @@
 
 This web application is built on top of twitter API. It allows a user to enter an interest
 phrase/sentence, a location, and a radius; it then finds people with similar interest/need by
-reading tweets published by people in the specified geographic range. The user then can send
+reading tweets from people in the specified geographic range. The user then can send
 a message to the group, maybe suggesting an action.
 
 For example, on a beautiful day in Auguest, if a user comes to the application and types in 
@@ -10,5 +10,5 @@ For example, on a beautiful day in Auguest, if a user comes to the application a
 expressing the same interest. S/he can then organize a group of 20 people to take a tour boat
 and have a group discount. Of course, a user is free to organize any other spontaneous activity,
 not necessarily involving a commercial transaction. The app is named as such because we were
-too caught up in the daily deal fervor!
+too caught up in the social buying/deal fervor!
 
