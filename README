@@ -1,9 +1,10 @@
 == Welcome to Deals and Social
 
-This web application is built on top of twitter API. It allows a user to enter an interest
-phrase/sentence, a location, and a radius; it then finds people with similar interest/need by
-reading tweets from people in the specified geographic range. The user then can send
-a message to the group, maybe suggesting an action.
+This web application was written during Chicago API Hackday in June 2011. It's built on
+top of twitter API. A user enters an interest phrase/sentence, a location,
+and a radius; then the app finds people with similar interest/need by reading tweets from
+people in the specified geographic range. The user then can send
+a message to the group, maybe suggesting an action/event.
 
 For example, on a beautiful day in Auguest, if a user comes to the application and types in 
 "boat tour Chicago architecture", then specify "Chicago", 10 miles, s/he can find some people
